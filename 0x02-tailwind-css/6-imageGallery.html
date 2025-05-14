@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grid and Flexbox Layout with Gallery</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @media (max-width: 768px) {
+      main {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body class="p-4">
+
+  <header class="bg-blue-500 text-white p-4">
+    <h1 class="text-3xl">Grid and Flexbox Layout</h1>
+  </header>
+
+  <main class="grid grid-cols-1 lg:grid-cols-3 gap-4 mt-4 min-h-screen">
+    <section class="lg:col-span-2 flex">
+      <div class="w-1/2 bg-red-200 p-4">Flexbox Item 1</div>
+      <div class="w-1/2 bg-red-400 p-4">Flexbox Item 2</div>
+    </section>
+    
+    <aside class="bg-green-200 p-4">Sidebar</aside>
+  </main>
+
+  <!-- ✅ New Responsive Image Gallery Section -->
+  <section class="mt-8">
+    <h2 class="text-2xl font-bold mb-4">Image Gallery</h2>
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+      <img src="../img/Street-level photo of a quiet city alley with cobblestone pavement.jpg" alt="Street-level photo of a quiet city alley with cobblestone pavement" class="w-full h-auto rounded">
+      <img src="../img/A modern, minimalistic photo of a cozy workspace with a laptop, coffee mug, and notepad on a wooden desk, soft natural lighting, blurred background.jpg" alt="A modern, minimalistic photo of a cozy workspace with a laptop, coffee mug, and notepad on a wooden desk, soft natural lighting, blurred background" class="w-full h-auto rounded">
+      <img src="../img/A minimalist workspace with a laptop, sketchbook, pencil, and potted plant on a white desk, soft morning light from a nearby window.jpg" alt="A minimalist workspace with a laptop, sketchbook, pencil, and potted plant on a white desk, soft morning light from a nearby window" class="w-full h-auto rounded">
+      <img src="../img/_Wide shot of a hiker standing on a rocky cliff overlooking a forest.jpg" alt="Wide shot of a hiker standing on a rocky cliff overlooking a forest" class="w-full h-auto rounded">
+      <img src="../img/_Top-down image of a yoga mat, water bottle.jpg" alt="Top-down image of a yoga mat, water bottle" class="w-full h-auto rounded">
+      <img src="../img/_Overhead shot of a rustic wooden cafe table with a slice of cake, cappuccino, and a flower vase.jpg" alt="Overhead shot of a rustic wooden cafe table with a slice of cake, cappuccino, and a flower vase" class="w-full h-auto rounded">
+    </div>
+  </section>
+
+  <footer class="bg-gray-800 text-white p-4 mt-8">
+    <p>&copy; 2024 John Doe's Blog</p>
+  </footer>
+
+</body>
+</html>
